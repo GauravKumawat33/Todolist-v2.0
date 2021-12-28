@@ -103,7 +103,7 @@ app.post("/delete",(req,res)=>{
     });
   }
 })
-
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
+let port=process.env.PORT;
+app.listen(port || 3000, function() {
+  console.log("Server started");
 });
